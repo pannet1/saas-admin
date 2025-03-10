@@ -35,7 +35,7 @@ app.post("/server", (req, res) => {
 });
 
 // Get all servers
-app.get("/server", (req, res) => {
+app.get("/servers", (req, res) => {
     db.all("SELECT * FROM server", [], (err, rows) => {
         if (err) {
             return res.status(500).json({ error: err.message });
